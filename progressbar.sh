@@ -8,23 +8,13 @@
 #                                                                              #
 ################################################################################
 
-VERBOSE=false
-
-export NUL="/dev/null"
-export STDIN="/dev/stdin"
-export STDOUT="/dev/stdout"
-export STDERR="/dev/stderr"
-
-function log()
+#
+# Description : delay executing script
+#
+function delay()
 {
-    PARAM_MESSAGE=$1 #String >>> Message
-
-    if $VERBOSE
-    then
-        echo "$(date +%d%h%Y\ %H:%M:%S) DEBUG >>> ${PARAM_MESSAGE}"
-    fi
+    sleep 0.2;
 }
-export -f log;
 
 #
 # Decription : print out executing progress
@@ -56,10 +46,36 @@ function progress()
     if [ $CURRENT_PROGRESS -le 80 -a $PARAM_PROGRESS -ge 80 ]; then echo -ne "[####################......] (80%) $PARAM_PHASE \r"  ; delay; fi;
     if [ $CURRENT_PROGRESS -le 85 -a $PARAM_PROGRESS -ge 85 ]; then echo -ne "[#######################...] (90%) $PARAM_PHASE \r"  ; delay; fi;
     if [ $CURRENT_PROGRESS -le 90 -a $PARAM_PROGRESS -ge 90 ]; then echo -ne "[##########################] (100%) $PARAM_PHASE \r" ; delay; fi;
-    if [ $CURRENT_PROGRESS -le 100 -a $PARAM_PROGRESS -ge 100 ];then echo -ne '#    Done!                                         \n' ; delay; fi;
+    if [ $CURRENT_PROGRESS -le 100 -a $PARAM_PROGRESS -ge 100 ];then echo -ne 'Done!                                            \n' ; delay; fi;
 
     CURRENT_PROGRESS=$PARAM_PROGRESS;
 
 }
+
+echo "The task is in progress, please wait a few seconds"
+
+progress 10 Initialize
+
+progress 20 "Phase 1      "
+
+progress 40 "Phase 2      "
+
+progress 60 "Processing..."
+
+progress 80 "Processing..."
+
+progress 90 "Processing..."
+
+progress 100 "Done        "
+
+echo
+
+
+
+
+
+
+
+
 
 
