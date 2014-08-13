@@ -25,9 +25,19 @@ SOFTWARE.
 # Summary       : Show a progress bar GUI on terminal platform                 #
 # Support       : haikieu2907@gmail.com                                        #
 # Created date  : Aug 12,2014                                                  #
-# Latest Modified date : Aug 12,2014                                           #
+# Latest Modified date : Aug 13,2014                                           #
 #                                                                              #
 ################################################################################
+
+############################---Usage---#########################################
+
+# Copy below functions (delay and progress fuctions) into your shell script directly
+# Then invoke progress function to show progress bar 
+
+# In other way, you could import source indirectly then using. Nothing different
+
+################################################################################
+
 
 #
 # Description : delay executing script
@@ -39,7 +49,7 @@ function delay()
 
 #
 # Description : print out executing progress
-#
+# 
 CURRENT_PROGRESS=0
 function progress()
 {
@@ -70,6 +80,14 @@ function progress()
     CURRENT_PROGRESS=$PARAM_PROGRESS;
 
 }
+
+#################################### DEMO ######################################
+
+# This is a simple demostration
+
+# Important notice: below code is not necessary in your code, remember to remove before using
+
+################################################################################
 
 echo "The task is in progress, please wait a few seconds"
 
