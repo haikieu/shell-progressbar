@@ -23,9 +23,9 @@
 ############################---Description---###################################
 #                                                                              #
 # Summary       : Show a progress bar GUI on terminal platform                 #
-# Support       : haikieu2907@gmail.com                                        #
+# Support       : haikieu2907@icloud.com                                        #
 # Created date  : Aug 12,2014                                                  #
-# Latest Modified date : Aug 13,2014                                           #
+# Latest Modified date : Nov 20,2017                                           #
 #                                                                              #
 ################################################################################
 
