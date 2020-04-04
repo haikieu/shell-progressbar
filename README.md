@@ -1,7 +1,7 @@
 Show progress bar on your shell script...
 =================
 
-Make a progress bar GUI in Shell script. This piece of script is supper silly simple to read, but work out! :)
+Make a progress bar GUI in Shell script. This piece of script is super silly simple to read, but work out! :)
 
 [![IMAGE ALT TEXT HERE](https://raw.githubusercontent.com/haikieu/shell-progressbar/master/demo.png)](https://www.youtube.com/watch?v=0Otp_vfbgv4)
 
